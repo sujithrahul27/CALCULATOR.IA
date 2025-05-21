@@ -13,83 +13,70 @@ let _multiply = Number(document.getElementById("1").innerText);
 let __divide = Number(document.getElementById("1").innerText);
 let _modulo = Number(document.getElementById("1").innerText);
 let _floor = Number(document.getElementById("1").innerText);
-let flag = 0;
-let digit = [false,false,false,false,false,false,false,false,false,false]
+
 
 let display = document.getElementById("displaytext");
 function clicked1(){
-  if(digit[0]==false){
-    display.innerText=1;
-    digit[0] = true;
-  }
-  else{
-    display.innerText+=1;
-  }
+ display.innerText+=1;
    
 }
 function clicked2(){
-    
+    display.innerText+=2;
 }
 function clicked3(){
-    
+    display.innerText+=3;
 }
 function clicked4(){
-    
+    display.innerText+=4;
 }
 function clicked5(){
-    
+    display.innerText+=5;
 }
 function clicked6(){
-    
+    display.innerText+=6;
 }
 function clicked7(){
-    
+    display.innerText+=7;
 }
 function clicked8(){
-    
+    display.innerText+=8;
 }
 function clicked9(){
-    console.log("clicked 9");
+    display.innerText+=9;
 }
 function clickedplus(){
-    console.log(digit," "+flag);
-    if(digit<=flag){
-        display.innerText="SYNTAX ERROR"
-    }
-    else{
-        display.innerText+="+";
-        flag++;
-    }
+   display.innerText+= '+';
 }
 function clickedminus(){
-    
+    display.innerText+='-';
 }
 function clickedmultiply(){
-    
+    display.innerText+='*';
 }
 function clickeddivide(){
-    
+    display.innerText+='/';
 }
-function clickedmodulo(){
-    
+function clicked0(){
+    display.innerText+=0;
 }
-function clickedfloor(){
-    
+function clicked00(){
+    display.innerText+="00";
 }
 function clickedequal(){
-    if(digit>1&&flag!=0){
-        var result = eval(display.innerText);
-        display.innerText=result;
-
-    }
-    else{
-        display.innerText="SYNTAX ERROR";
-    }
+  try{
+    let result = eval(display.innerText);
+    display.innerText = result;
+  }
+  catch(error)
+  {
+    display.style.color = "red";
+    display.innerText="INVALID SYNTAX";
+    setTimeout(()=>clickedreset(),2000);
+  }
+   
 }
 function clickedreset(){
-    digit=0;
-    a=0;
-    b=1;
-    flag=0;
-    display.innerText="HELLO :)"
+   
+    display.innerText=""
+    display.style.color="white";
 }

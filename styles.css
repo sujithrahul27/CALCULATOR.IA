@@ -11,6 +11,7 @@ h1{
     border-color: black;
     border-style: solid;
     text-align: center;
+    overflow: hidden;
 }
 .input{
     width: 500px;
@@ -18,7 +19,7 @@ h1{
     border: 5px black solid;
     margin-left: 24%;
     background-color: black;
-    opacity: 75%;
+    opacity: 90%;
 }
 .row{
     width: 500px;
@@ -105,4 +106,14 @@ h1{
 }
 .equal{
     display: inline;
+}
+body{
+    background-image:url(images/minimalistic\ square\ patterns\ with\ alternating\ colors\ of\ neon\ green\ and\ bright\ silver.png);
+    background-position: center;
+    background-size: cover;
+
+}
+.calculator{
+    align-items: center;
+    margin-left: 175px;
 }

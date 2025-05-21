@@ -8,8 +8,9 @@
     </head>
     <body>
         <h1>ATHANDA ITHANDA CALCULATOR NAAN THAN DA</h1>
+        <div class="calculator">
         <div class="display">
-         <h3 id="displaytext">HELLO :)</h3>
+         <h3 id="displaytext"></h3>
         </div>
         <div class="input">
             <H1>SURA CALCULATOR</H1>
@@ -18,7 +19,7 @@
                 <button class="inputbutton" id="2"  onclick="clicked2()" >2</button>
                 <button class="inputbutton" id="3"  onclick="clicked3()">3</button>
                 <button class="inputbutton" id="+"  onclick="clickedplus()">+</button>
-                <button class="inputbutton" id="-"  onclick="clickedmius()">-</button>
+                <button class="inputbutton" id="-"  onclick="clickedminus()">-</button>
                 
                 </div>
                 <div class="row">
@@ -32,8 +33,8 @@
                     <button class="inputbutton" id="7"  onclick="clicked7()">7</button>
                     <button class="inputbutton" id="8"  onclick="clicked8()">8</button>
                     <button class="inputbutton" id="9"  onclick="clicked9()">9</button>
-                    <button class="inputbutton" id="%"  onclick="clickedmodulo()">%</button>
-                    <button class="inputbutton"  id="//" onclick="clickedfloor()">//</button>
+                    <button class="inputbutton" id="0"  onclick="clicked0()">0</button>
+                    <button class="inputbutton"  id="00" onclick="clicked00()">00</button>
                 </div>
                 <div class="equal">
                      <button class="resetbutton" id ="resetbutton" onclick= "clickedreset()">AC</button> 
@@ -42,6 +43,7 @@
                 </div>
               
         </div> 
+        </div>
         <script src="scripts.js"></script>
     </body>
 </html>
