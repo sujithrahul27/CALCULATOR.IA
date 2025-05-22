@@ -117,3 +117,7 @@ body{
     align-items: center;
     margin-left: 175px;
 }
+#summa{
+    background-color: aliceblue;
+    border-radius: 5px;
+}

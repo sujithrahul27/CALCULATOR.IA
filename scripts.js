@@ -57,10 +57,10 @@ function clickeddivide(){
     display.innerText+='/';
 }
 function clicked0(){
-    display.innerText+=0;
+    display.innerText+='.';
 }
 function clicked00(){
-    display.innerText+="00";
+    display.innerText+="0";
 }
 function clickedequal(){
   try{
