@@ -86,31 +86,42 @@ function clicked00(){
 function clickedequal(){
 
   try{
+    let flag = false;
     let result = eval(display.innerText);
     if(result==Infinity){
              var x =document.getElementById("thappuney");
     x.style.display="block";
-    var y = document.getElementById("asari");
-    y.pause();
-    y.currentTime=0;
+    flag = true;
+   
+   
     x.play();
     setTimeout(()=>clickedreset(),1000);
+     display.innerText=""
+    display.style.color="white";
+    var x =document.getElementById("thappuney");
+    x.style.display="none";
     }
-    else{
-    document.getElementById("asari").play();
-    }
+   
     display.innerText = result;
   }
   catch(error)
   {
     var x =document.getElementById("thappuney");
     x.style.display="block";
-    var y = document.getElementById("asari");
-    y.pause();
-    y.currentTime=0;
     x.play();
+    flag = true;
 
     setTimeout(()=>clickedreset(),1000);
+     display.innerText=""
+    display.style.color="white";
+    var x =document.getElementById("thappuney");
+    x.style.display="none";
+  }
+  finally{
+    console.log(flag)
+    if(flag==false){
+      document.getElementById("asari").play();
+    }
   }
    
 }
